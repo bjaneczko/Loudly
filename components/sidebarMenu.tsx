@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 const SidebarMenu = ({ item }) => {
   return (
-    <ListItem paddingX="20px" fontSize="16px" key={item.name}>
+    <ListItem paddingX="20px" fontSize="16px">
       <LinkBox>
         <NextLink href={item.route} passHref>
           <LinkOverlay>

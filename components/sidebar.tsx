@@ -67,14 +67,14 @@ const Sidebar = () => {
         <Box marginBottom="30px">
           <List spacing={2}>
             {navMenu.map((item) => (
-              <SidebarMenu item={item} />
+              <SidebarMenu item={item} key={item.name} />
             ))}
           </List>
         </Box>
         <Box>
           <List spacing={2}>
             {musicMenu.map((item) => (
-              <SidebarMenu item={item} />
+              <SidebarMenu item={item} key={item.name} />
             ))}
           </List>
         </Box>
