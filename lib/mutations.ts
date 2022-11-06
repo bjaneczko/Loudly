@@ -4,5 +4,5 @@ export const auth = (
   mode: 'signin' | 'signup',
   body: { email: string; password: string }
 ) => {
-  return fetcher(`/${mode}`)
+  return fetcher(`/${mode}`, body)
 }

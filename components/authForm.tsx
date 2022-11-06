@@ -15,7 +15,7 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
     e.preventDefault()
     setIsLoading(true)
 
-    const user = await auth(mode, { email, password })
+    await auth(mode, { email, password })
     setIsLoading(false)
     router.push('/')
   }
@@ -41,12 +41,12 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
             <Button
               type="submit"
               bg="green.500"
+              isLoading={isLoading}
               sx={{
                 '&:hover': {
                   bg: 'green.300',
                 },
               }}
-              isLoading={isLoading}
             >
               {mode}
             </Button>
