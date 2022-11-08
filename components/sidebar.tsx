@@ -63,7 +63,11 @@ const Sidebar = () => {
     >
       <Box paddingY="20px" height="100%">
         <Box width="160px" marginBottom="20px" paddingX="20px">
-          <NextImage src="/logo.svg" height={60} width={120} />
+          <NextLink href="/" passHref>
+            <Box cursor="pointer">
+              <NextImage src="/logo.svg" height={60} width={120} />
+            </Box>
+          </NextLink>
         </Box>
         <Box marginBottom="30px">
           <List spacing={2}>
