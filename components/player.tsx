@@ -35,7 +35,7 @@ const Player = ({ songs, activeSong }) => {
   }
 
   const onShuffle = () => {
-    setShuffle((state) => !state) // avoid bugs with taking previous state etc. always put current state in callback like that
+    setShuffle((state) => !state)
   }
 
   const onRepeat = () => {
@@ -44,7 +44,9 @@ const Player = ({ songs, activeSong }) => {
 
   return (
     <Box>
-      <Box>{/* <ReactHowler playing={playing} src={activeSong?.url} /> */}</Box>
+      <Box>
+        <ReactHowler playing={playing} src={activeSong?.url} volume={0.3} />
+      </Box>
       <Center color="gray.600">
         <ButtonGroup>
           <IconButton
