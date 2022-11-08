@@ -10,6 +10,7 @@ const SongTable = ({ songs }) => {
       <Box padding="10px" marginBottom="20px">
         <Box marginBottom="30px">
           <IconButton
+            _focus={{ boxShadow: 'none' }}
             aria-label="play"
             icon={<BsFillPlayFill fontSize="30px" />}
             colorScheme="green"
