@@ -62,6 +62,14 @@ const Player = ({ songs, activeSong }) => {
     repeatRef.current = repeat
   }, [repeat])
 
+  useEffect(() => {
+    if (playing && isSeeking) {
+      setPlaying(false)
+    }
+
+    return () => setPlaying(true)
+  }, [isSeeking])
+
   const setPlayState = (value: boolean) => {
     setPlaying(value)
   }
